@@ -16,8 +16,8 @@ provider "aws" {
   region = "ap-northeast-1"
 }
 
-module rds {
-    source = "../module/rds"
-    vpc_id = var.vpc_id
-    password = var.mysql_password
+module "rds" {
+  source   = "../module/rds"
+  vpc_id   = var.vpc_id
+  password = var.mysql_password
 }
