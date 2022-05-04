@@ -19,5 +19,5 @@ provider "aws" {
 module rds {
     source = "../module/rds"
     vpc_id = var.vpc_id
-    password = var.password
+    password = var.mysql_password
 }
